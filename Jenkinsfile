@@ -4,16 +4,10 @@ pipeline {
     agent none
     stages {
         stage('Build') {
-            steps {
-            }
-        }
+        	}	
         stage('Test') {
-            steps {
-            }
-        }
+        	}
         stage('Deliver') {
-                    steps {
-                        }
-                    }
-        }
+        	}
+	}
 }
