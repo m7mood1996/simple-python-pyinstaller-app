@@ -1,13 +1,10 @@
 pipeline {
-//None parameter in the agent section means that no global agent will be allocated for the entire Pipeline’s
-//execution and that each stage directive must specify its own agent section.
-    agent none
+    agent { docker { image 'python:3.10.7-alpine' } }
     stages {
-        stage('Build') {
-        	}	
-        stage('Test') {
-        	}
-        stage('Deliver') {
-        	}
-	}
+        stage('build') {
+            steps {
+                sh 'python --version'
+            }
+        }
+    }
 }
